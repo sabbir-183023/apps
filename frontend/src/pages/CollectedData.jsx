@@ -13,7 +13,7 @@ const CollectedData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/data/`);
+        const res = await axios.get(`https://unicode-api.vercel.app/api/data/`);
         setWdata(res.data);
       } catch (err) {
         console.log(err);
@@ -25,7 +25,7 @@ const CollectedData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/data/pmdata`);
+        const res = await axios.get(`https://unicode-api.vercel.app/api/data/pmdata`);
         setPmdata(res.data);
       } catch (err) {
         console.log(err);
