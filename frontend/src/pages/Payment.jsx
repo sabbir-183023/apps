@@ -32,7 +32,7 @@ const Payment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8081/api/data/paymentdata", {
+      await axios.post("https://unicode-api.vercel.app/api/data/paymentdata", {
         name,
         mobile,
         txnid,
@@ -49,7 +49,7 @@ const Payment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/data/bkash/1`);
+        const res = await axios.get(`https://unicode-api.vercel.app/api/data/bkash/1`);
         setBkash(res.data);
       } catch (err) {
         console.log(err);
@@ -65,7 +65,7 @@ const Payment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/data/nagad/1`);
+        const res = await axios.get(`https://unicode-api.vercel.app/api/data/nagad/1`);
         setNagad(res.data);
       } catch (err) {
         console.log(err);
@@ -81,7 +81,7 @@ const Payment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/data/amount/1`);
+        const res = await axios.get(`https://unicode-api.vercel.app/api/data/amount/1`);
         setAmount(res.data);
       } catch (err) {
         console.log(err);
