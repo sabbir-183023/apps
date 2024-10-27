@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://unicode-beta.vercel.app"],
+    origin: ["https://unicode-beta.vercel.app/"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
