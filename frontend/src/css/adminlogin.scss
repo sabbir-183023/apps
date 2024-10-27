@@ -1,0 +1,100 @@
+// LoginForm.scss
+
+$primary-color: #3498db;
+$background-color: #f7f7f7;
+$button-color: #2ecc71;
+$text-color: #333;
+$border-radius: 5px;
+$font-family: "Roboto", sans-serif;
+
+.greetings {
+  height: 500px;
+  width: 100%;
+  h2 {
+    text-align: center;
+    color: rgb(0, 255, 21);
+    font-size: 50px;
+    top: 300px;
+    left: 300px;
+    position: absolute;
+  }
+  .combined {
+    display: flex;
+    width: 3000px;
+    margin: auto;
+    position: absolute;
+    font-size: 25px;
+    top: 370px;
+    left: 520px;
+    p {
+      text-align: center;
+      a {
+        color: blue;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: $background-color;
+}
+
+.login-form {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  width: 100%;
+  max-width: 400px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+    font-family: $font-family;
+  }
+
+  .input-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $text-color;
+    }
+
+    input {
+      width: 94%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: $button-color;
+    border: none;
+    border-radius: $border-radius;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    button:hover {
+      background-color: $background-color;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+$font-family: "Roboto", sans-serif;
+.contactus{
+    background-image: url(../assets/banners/contactusbanner.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .combinedbox2 {
+        display: flex;
+        top: 300px;
+        left: 400px;
+        position: absolute;
+        .nagad {
+          width: 60px;
+        }
+        .h22 {
+          font-family: $font-family;
+          padding-top: 5px;
+          font-size: 40px;
+        }
+      }
+      @media (max-width: 760px) {
+        .combinedbox2{
+          left: 30px;
+          top: 450px;
+        }
+      }
+}

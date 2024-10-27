@@ -1,0 +1,105 @@
+.mainheader {
+    height: 112px;
+    width: 100%;
+    background-image: url("https://t4.ftcdn.net/jpg/02/76/08/07/240_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg");
+    margin-top: -8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainheader .logobox {
+    width: 300px;
+    float: left;
+    padding: 10px 0 0 50px;
+    display: flex;
+}
+
+.mainheader .logobox img {
+    width: 98px;
+    border-radius: 5px;
+}
+
+.mainheader .navigations {
+    display: flex;
+    width: 500px;
+    float: right;
+    padding-top: 30px;
+}
+
+.mainheader .navigations a {
+    text-decoration: none;
+    color: black;
+    padding: 14px;
+}
+
+.mainheader .navigations a h2 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.mainheader .navigations a h2:hover {
+    color: yellow;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    .mainheader {
+        height: auto;
+    }
+
+    .mainheader .logobox {
+        width: 400px;
+        padding-left: 20px;
+        margin: auto 0 0 144px;
+    }
+
+    .mainheader .logobox img {
+        width: 180px;
+    }
+
+    .mainheader .navigations {
+        width: 100%;
+        float: none;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .mainheader .navigations a h2 {
+        font-size: 18px;
+    }
+}
+
+/* Responsive styles for mobile */
+@media only screen and (max-width: 480px) {
+    .mainheader {
+        height: auto;
+    }
+
+    .mainheader .logobox {
+        width: 150px;
+        padding-left: 10px;
+    }
+
+    .mainheader .logobox img {
+        width: 60px;
+    }
+
+    .mainheader .navigations {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5px;
+    }
+
+    .mainheader .navigations a h2 {
+        font-size: 16px;
+    }
+
+    .mainheader .navigations a {
+        padding: 10px;
+    }
+}

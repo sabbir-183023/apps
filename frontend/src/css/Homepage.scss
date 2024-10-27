@@ -1,0 +1,657 @@
+$primary-color: #333;
+$secondary-color: #ff5733;
+$font-family: "Roboto", sans-serif;
+$font-family2: "Noto Serif Bengali", serif;
+
+.popup {
+  width: 1000px;
+  height: 600px;
+  background-image: url("../assets/banners/WhatsappBackground.jpg");
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .textbox {
+    width: 780px;
+    padding: 20px 0 0 20px;
+    p {
+      font-family: "Noto Serif Bengali", serif;
+      color: white;
+      font-size: 30px;
+    }
+  }
+  .crossbox {
+    p {
+      text-align: right;
+      font-size: 50px;
+      color: red;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    p:hover {
+      color: rgb(161, 0, 0);
+    }
+    margin-top: -80px;
+    float: right;
+    width: 80px;
+  }
+  .whatsapplogo {
+    width: 100%;
+    margin-left: 430px;
+    margin-top: 30px;
+    img {
+      width: 150px;
+    }
+  }
+  .popupmini {
+    height: 200px;
+    width: 400px;
+    margin: 100px auto auto auto;
+    label {
+      text-align: center;
+    }
+    input {
+      font-family: "Roboto", sans-serif;
+      color: #333;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      border-radius: 0.2rem;
+      background-color: rgb(255, 255, 255);
+      border: none;
+      width: 84%;
+      display: block;
+      border-bottom: 0.3rem solid transparent;
+      transition: all 0.3s;
+      height: 0px;
+    }
+    input:placeholder-shown + .form__label {
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transform: translateY(-4rem);
+      transform: translateY(-4rem);
+    }
+    p {
+      text-align: right;
+      color: red;
+      cursor: pointer;
+    }
+    button {
+      margin: auto;
+      text-align: center;
+      width: 100%;
+      height: 30px;
+      border: 1px solid white;
+      background: #d9d9d9aa;
+      color: white;
+      font-size: 20px;
+    }
+    button:hover {
+      background: none;
+    }
+    button:active {
+      background: #bdbdbdaa;
+    }
+  }
+}
+main {
+  padding: 40px;
+  font-family: $font-family;
+  background-color: #f7f7f7;
+}
+
+.hero {
+  text-align: center;
+  background-image: url("../assets/banners/homebanner.avif");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+
+  h2,
+  p {
+    color: white;
+    font-family: $font-family2;
+  }
+  .mainpage-paragraph {
+    width: 700px;
+    margin: auto;
+    text-align: justify;
+    p {
+      font-size: 18px;
+    }
+    li {
+      font-family: $font-family2;
+      color: white;
+      list-style: decimal;
+      text-align: left;
+    }
+  }
+  h2 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  img {
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+    transition: 0.5s;
+    a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  }
+  button:hover {
+    background-color: #cacacab8;
+  }
+}
+
+.homepagevideo {
+  width: 1000px;
+  margin: auto;
+  h1 {
+    font-family: $font-family;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+  }
+  h2 {
+    font-family: $font-family2;
+    text-align: center;
+    padding: 10px;
+  }
+  video {
+    height: 550px;
+    margin: auto;
+  }
+}
+.joinbutton {
+  width: 100%;
+  margin: 30px 0 0 0;
+  text-align: center;
+  a {
+    text-decoration: none;
+    button {
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+      );
+      margin: 10px auto;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+      border: 2px solid rgb(132, 132, 132);
+      font-size: 25px;
+      font-family: $font-family2;
+    }
+
+    button:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.features {
+  width: 1100px;
+  margin: auto;
+  .featureTitle {
+    h2 {
+      display: block;
+      text-align: center;
+      padding: 40px;
+      font-size: 40px;
+      font-family: $font-family2;
+    }
+  }
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .feature-card {
+      border: 1px solid rgb(201, 201, 201);
+      width: 300px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      h3,
+      p {
+        text-align: center;
+        padding: 10px;
+        font-family: $font-family2;
+      }
+      h3 {
+        font-weight: 800;
+      }
+      span {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+.h2o {
+  margin: 50px 0 0 0;
+  text-align: center;
+  font-family: $font-family2;
+  font-size: 40px;
+}
+
+.testimonials {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #010325;
+  color: white;
+  overflow-y: scroll;
+  height: 500px; /* Adjust the height as needed */
+  // position: absolute;
+  width: 80%;
+  h2 {
+    font-size: 40px;
+    padding: 10px;
+    font-family: $font-family2;
+  }
+  p {
+    font-family: $font-family2;
+  }
+
+  .testimonial {
+    background-color: #010325;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+    }
+  }
+}
+.NumberOfStudentsENrolled {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  background-image: url(../assets/banners/studentsenrolled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .numbers {
+    width: 50%;
+    float: left;
+    height: 100%;
+    text-align: center;
+    padding-top: 40px;
+    .numberbox {
+      border: 5px solid white;
+      font-size: 90px;
+      border-radius: 110px;
+      width: 200px;
+      height: 155px;
+      margin: auto;
+      padding-top: 50px;
+    }
+    span {
+      font-family: $font-family;
+      color: yellow;
+    }
+    label{
+      color: #ff0022;
+      font-size: 35px;
+      margin:5px;
+      cursor: pointer;
+      position: absolute;
+      left: 420px;
+      top: 3440px;
+    }
+    @media (max-width: 760px) {
+      label{
+        left: 170px;
+      top: 4160px;
+      }  
+    }
+  }
+  .memberedit{
+    position: absolute;
+    left: 280px;
+    margin-top: 4px;
+    border: 2px solid #fff700;
+    border-radius: 10px 10px 10px 10px;
+    input{
+      border-radius: 10px 0 0 10px;
+      font-size: 20px;
+      padding: 5px;
+    }
+    button{
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 0 10px 10px 0;
+    }
+  }
+  @media (max-width: 760px) {
+    .memberedit{
+      left: 30px;
+    }
+  }
+  .titleofnumbercount {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #0103259d;
+    h1 {
+      font-family: $font-family;
+      color: white;
+      margin-top: 80px;
+      margin-left: 20px;
+      font-size: 50px;
+    }
+  }
+}
+// mobile format
+@media (max-width: 680px) {
+  .popup {
+    width: 300px;
+    height: 500px;
+    background-image: url("../assets/banners/WhatsappBackground.jpg");
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    .textbox {
+      width: 90%;
+      padding: 20px 0 0 20px;
+      float: left;
+      p {
+        font-family: "Noto Serif Bengali", serif;
+        color: white;
+        font-size: 22px;
+      }
+    }
+    .crossbox {
+      width: 10%;
+      float: left;
+      p {
+        text-align: right;
+        font-size: 40;
+        color: red;
+  
+      }
+      p:hover {
+        color: rgb(161, 0, 0);
+      }
+      margin-top: -170px;
+      float: right;
+      width: 100%;
+    }
+    .whatsapplogo {
+      width: 100%;
+      margin-left: 70px;
+      img {
+        width: 150px;
+      }
+    }
+    .popupmini {
+      height: 200px;
+      width: 100%;
+      margin: 20px auto 0 auto;
+      label {
+        text-align: center;
+      }
+      input {
+        font-family: "Roboto", sans-serif;
+        color: #333;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+        border-radius: 0.2rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        width: 80%;
+        display: block;
+        border-bottom: 0.3rem solid transparent;
+        transition: all 0.3s;
+        height: 0px;
+      }
+      input:placeholder-shown + .form__label {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-4rem);
+        transform: translateY(-4rem);
+      }
+      p {
+        text-align: right;
+        color: red;
+        cursor: pointer;
+      }
+      button {
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        border: 1px solid white;
+        background: #d9d9d9aa;
+        color: white;
+        font-size: 20px;
+      }
+      button:hover {
+        background: none;
+      }
+      button:active {
+        background: #bdbdbdaa;
+      }
+    }
+  }
+  .homepagevideo {
+    width: 100%;
+    margin: auto;
+    h1 {
+      font-family: $font-family;
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      font-family: $font-family2;
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+    }
+    video {
+      width: 100%;
+      height: 175px;
+      margin: auto;
+    }
+  }
+  .hero {
+    text-align: center;
+    background-image: url("../assets/banners/homebanner.avif");
+    background-size: cover;
+    background-position: center;
+    // padding: 100px 0;
+    width: 100%;
+
+    h2,
+    p {
+      color: white;
+      font-family: $font-family2;
+    }
+    .mainpage-paragraph {
+      width: 80%;
+      margin: auto;
+      text-align: justify;
+      p {
+        font-size: 15px;
+      }
+      li {
+        font-family: $font-family2;
+        color: white;
+        list-style: decimal;
+        text-align: left;
+        font-size: 15px;
+      }
+    }
+    h2 {
+      font-size: 30px;
+      padding-bottom: 20px;
+    }
+
+    img {
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0);
+      border: 2px solid white;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 15px;
+      transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+      }
+    }
+    button:hover {
+      background-color: #cacacab8;
+    }
+  }
+  .joinbutton {
+    a {
+      button {
+        font-size: 15px;
+      }
+    }
+  }
+  .features {
+    width: 100%;
+    .featureTitle {
+      h2 {
+        font-size: 25px;
+      }
+    }
+    .boxes {
+      .feature-card {
+        margin-bottom: 20px;
+        h3,
+        p {
+          text-align: center;
+          padding: 10px;
+          font-family: $font-family2;
+          font-size: 15px;
+        }
+        h3 {
+          font-weight: 800;
+        }
+        span {
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+  .h2o {
+    font-size: 25px;
+  }
+  .testimonials {
+    width: 100%;
+    h2 {
+      font-size: 40px;
+      padding: 10px;
+      font-family: $font-family2;
+    }
+    p {
+      font-family: $font-family2;
+    }
+  
+    .testimonial {
+      background-color: #010325;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+      }
+    }
+  }
+  .NumberOfStudentsENrolled {
+    width: 100%;
+    height: 400px;
+    background-image: url(../assets/banners/studentsenrolled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    .numbers {
+      width: 100%;
+      text-align: center;
+      padding-top: 40px;
+      height: 155px;
+      .numberbox {
+        border: 5px solid white;
+        font-size: 90px;
+        border-radius: 110px;
+        width: 200px;
+        height: 155px;
+        margin: auto;
+        padding-top: 50px;
+      }
+      span {
+        font-family: $font-family;
+        color: yellow;
+        text-shadow: 2px 2px #ff0000;
+      }
+    }
+    .titleofnumbercount {
+      width: 100%;
+      height: 100px;
+      background-color: #0103259d;
+      margin-top: 80px;
+      h1 {
+        font-family: $font-family;
+        color: white;
+        margin-left: 1px;
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

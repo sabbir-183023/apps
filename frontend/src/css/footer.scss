@@ -1,0 +1,154 @@
+$font-family: "Roboto", sans-serif;
+
+.footer {
+  background-image: url(../assets/banners/footerbanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 50%;
+  
+  .mainbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* For desktop/tablets */
+    
+    .flogobox {
+      width: 70%;
+      padding-left: 40px;
+      padding-top: 40px;
+
+      img {
+        width: 200px;
+      }
+    }
+    
+    .linkbox {
+      width: 30%;
+      float: right;
+      
+      ul {
+        padding-top: 50px;
+
+        li {
+          list-style: none;
+          padding: 10px;
+          
+          a {
+            color: white;
+            text-decoration: none;
+            font-family: $font-family;
+            font-size: 20px;
+          }
+          
+          a:hover {
+            color: #ddff00;
+          }
+        }
+      }
+    }
+  }
+  
+  .socialbox {
+    text-align: right;
+    margin-right: 340px;
+    padding: 10px;
+
+    .img1 {
+      width: 60px;
+    }
+
+    .img2 {
+      width: 35px;
+    }
+  }
+  @media (max-width: 760px){
+    .socialbox{
+      width: 100%;
+      text-align: center;
+      margin-left: -20px;
+    }
+  }
+  
+  .copyright {
+    background-color: rgb(22, 66, 143);
+    
+    p {
+      text-align: center;
+      padding: 20px 0;
+      font-family: $font-family;
+      color: white;
+    }
+  }
+}
+@media (max-width: 760px){
+  .copyright{
+    font-size: 12px;
+  }
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1024px) {
+  /* Tablets */
+  .footer .mainbox {
+    flex-direction: column; /* Stack the content vertically */
+    text-align: center;
+
+    .flogobox {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .linkbox {
+      width: 100%;
+      float: none;
+    }
+
+    .socialbox {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Phones */
+  .footer .mainbox {
+    flex-direction: column;
+    text-align: center;
+
+    .flogobox {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 20px;
+
+      img {
+        width: 150px; /* Resize logo for mobile */
+      }
+    }
+
+    .linkbox {
+      width: 100%;
+      ul {
+        padding-top: 20px;
+
+        li a {
+          font-size: 16px; /* Smaller text for mobile */
+        }
+      }
+    }
+  }
+
+  .socialbox {
+    text-align: center;
+    margin-right: 0;
+    padding: 20px 0;
+    
+    .img1 {
+      width: 50px;
+    }
+
+    .img2 {
+      width: 30px;
+    }
+  }
+
+}
