@@ -11,12 +11,12 @@ export const AuthContexProvider = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    const res = await axios.post("http://localhost:8081/api/auth/login", inputs);
+    const res = await axios.post("https://unicode-api.vercel.app/api/auth/login", inputs);
     setCurrentUser(res.data);
   };
 
   const logout = async () => {
-    await axios.post("http://localhost:8081/api/auth/logout");
+    await axios.post("https://unicode-api.vercel.app/api/auth/logout");
     setCurrentUser(null);
   };
 

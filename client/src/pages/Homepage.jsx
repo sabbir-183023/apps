@@ -38,7 +38,7 @@ const Homepage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8081/api/data/", { number });
+      await axios.post("https://unicode-api.vercel.app/api/data/", { number });
     } catch (err) {}
     setShowElement(false);
   };
@@ -49,7 +49,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/data/member/1`);
+        const res = await axios.get(`https://unicode-api.vercel.app/api/data/member/1`);
         setMember(res.data);
       } catch (err) {
         console.log(err);
@@ -63,7 +63,7 @@ const Homepage = () => {
   const handleMemberEdit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:8081/api/data/memberedit/1", {
+      await axios.put("https://unicode-api.vercel.app/api/data/memberedit/1", {
         memberedit,
       });
       window.location.reload();
