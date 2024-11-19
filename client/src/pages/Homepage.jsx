@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import "../css/Homepage.scss";
 import { FaBook } from "react-icons/fa";
 import { FaRegHandPeace } from "react-icons/fa";
@@ -16,8 +16,6 @@ import six from "../assets/reviewpeople/6.jpeg";
 import seven from "../assets/reviewpeople/7.jpeg";
 import eight from "../assets/reviewpeople/8.jpeg";
 import introvdo from "../assets/videos/VID_20240925_161834_111.mp4";
-import { FaEdit } from "react-icons/fa";
-import { AuthContext } from "../../context/authContext";
 
 const Homepage = () => {
   const [showElement, setShowElement] = useState(true);
@@ -25,12 +23,6 @@ const Homepage = () => {
     display: showElement ? "block" : "none",
   };
 
-  const { currentUser } = useContext(AuthContext);
-
-  const [showElement2, setShowElement2] = useState(false);
-  const elementStyle2 = {
-    display: showElement2 ? "flex" : "none",
-  };
 
   const [number, setNumber] = useState("");
 
@@ -38,7 +30,7 @@ const Homepage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://unicode-api.vercel.app/api/data/", { number });
+      await axios.post("api/data/", { number });
     } catch (err) {}
     setShowElement(false);
   };
@@ -49,7 +41,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://unicode-api.vercel.app/api/data/member/1`);
+        const res = await axios.get(`http://localhost:8081/api/data/member/1`);
         setMember(res.data);
       } catch (err) {
         console.log(err);
@@ -58,17 +50,7 @@ const Homepage = () => {
     fetchData();
   }, [1]);
 
-  // updating member
-  const [memberedit, setMemberEdit] = useState("");
-  const handleMemberEdit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.put("https://unicode-api.vercel.app/api/data/memberedit/1", {
-        memberedit,
-      });
-      window.location.reload();
-    } catch (err) {}
-  };
+
 
   return (
     <div>
