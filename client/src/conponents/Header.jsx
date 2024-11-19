@@ -24,6 +24,9 @@ const Header = () => {
         <Link to={"/contact"}>
           <h2>Contact Us</h2>
         </Link>
+        <Link to={"/admin"}>
+          <h2>Admin Login</h2>
+        </Link>
       </div>
     </div>
   );
